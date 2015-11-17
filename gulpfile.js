@@ -63,7 +63,7 @@ var gulp = require('gulp'),
  	gulp.watch('src/images/**/*', ['images']);  
  	// 建立即时重整伺服器  
  	var server = livereload();  
- 	// 看守所有位在 dist/  目录下的档案，一旦有更动，便进行重整  
+ 	// 看守所有位在 dist/  目录下的档案，一旦有更动，便进行重整(刷新) 
  	gulp.watch(['public/dist/**']).on('change', function(file) { 
  		server.changed(file.path); 
  	}); 
