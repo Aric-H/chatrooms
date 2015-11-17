@@ -51,12 +51,12 @@ var gulp = require('gulp'),
  });  
  // 预设任务 
  gulp.task('default', ['clean'], function() { 
- 	gulp.start('styles', 'scripts', 'images'); 
+ 	gulp.start('styles', 'scripts', 'images','watch'); 
  });  
  // 看守 
  gulp.task('watch', function() {  
  	// 看守所有.scss档,如果有改变,执行styles任务  
- 	gulp.watch('src/styles/**/*.scss', ['styles']);  
+ 	gulp.watch('src/styles/**/*.css', ['styles']);  
  	// 看守所有.js档,如果有改变,执行scripts任务  
  	gulp.watch('src/scripts/**/*.js', ['scripts']);  
  	// 看守所有图片档,如果有改变,执行images任务  

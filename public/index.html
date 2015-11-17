@@ -2,9 +2,41 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>首页</title>
+	<title>Chat</title>
+	<link rel="stylesheet" type="text/css" href="../public/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../public/dist/styles/style.min.css">
 </head>
 <body>
-	<h1>Hello Node</h1>
+	<div class="container">
+		<div class="panel panel-primary">
+		  <div class="panel-heading" id="room">当前房间</div>
+		  <div class="panel-body">
+		    <p id="room-list">
+		    	
+		    </p>
+		  </div>
+		  <hr/>
+		  <div id="message">
+		  	
+		  </div>
+		</div>
+		<form>
+			<div class="form-group">
+				 <div class="input-group">
+			      <input type="text" class="form-control" id="send-message" placeholder="请输入...">
+			      <div class="input-group-addon" id="send-button">发送</div>
+			    </div>
+			</div>
+			<div id="help">
+				<b>聊天命令：</b>
+				<ul>
+					<li>改变昵称：<code>/昵称 [用户名]</code></li>
+					<li>加入/创建房间：<code>/加入 [房间名]</code></li>
+				</ul>
+			</div>
+		</form>
+	</div>
+	<script src="../public/jquery-1.11.3.min.js"></script>
+	<script src="../public/dist/scripts/main.min.js"></script>
 </body>
 </html>
